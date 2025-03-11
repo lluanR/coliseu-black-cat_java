@@ -20,4 +20,31 @@ public class Personagem {
         this.fraseDaVitoria = fraseDaVitoria;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAtaque() {
+        return ataque;
+    }
+
+    public int getDefesa() {
+        return defesa;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public int getEspecial() {
+        return especial;
+    }
+
+    public String getFraseInicial() {
+        return fraseInicial;
+    }
+
+    public String getFraseDaVitoria() {
+        return fraseDaVitoria;
+    }
 }

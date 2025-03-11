@@ -1,3 +1,5 @@
+import personagens.*;
+
 import java.util.Scanner;
 
 import static constants.Constants.LOG_LISTA_PERSONAGENS;
@@ -6,21 +8,14 @@ public class Application {
 
     public static void main(String[] args) {
 
-        // Criar uma classe para Personagens
-        // Criar uma classe para cada personagem
-        // Implementar o Scanner para escolher 2 Personagens
-
-        // A aplicação consistirá em um duelo, o duelo ocorrerá de forma automática e declarará um vencedor.
-        // O primeiro atacante será aleatório
-        // Cada personagem vai ter um status de: ataque, defesa, vida, carregamento do especial (próximo ataque x3)
-        // Será informado cada rodada na tela
-
-        // ORIENTAÇÃO À OBJETO
-        // 4 pilares
-        // Herança, Encapsulamento, Polimorfismo, Abstração
+        // Você já fez a seleção de personagem mas...
+        // Não atribuiu o valor à um personagem
+        // Usando o Switch, defina o personagem selecionado
 
         int numeroPrimeiroPersonagem;
         int numeroSegundoPersonagem;
+        Personagem primeiroPersonagem;
+        Personagem segundoPersonagem;
 
         Scanner scanner = new Scanner(System.in);
 
@@ -31,8 +26,12 @@ public class Application {
         System.out.println(LOG_LISTA_PERSONAGENS);
 
         numeroPrimeiroPersonagem = selecaoDePersonagem(true, scanner, null);
+        primeiroPersonagem = atribuicaoDeNumeroAPersonagem(numeroPrimeiroPersonagem);
+        System.out.println(primeiroPersonagem.getNome() + ": " + primeiroPersonagem.getFraseInicial());
 
         numeroSegundoPersonagem = selecaoDePersonagem(false, scanner, numeroPrimeiroPersonagem);
+        segundoPersonagem = atribuicaoDeNumeroAPersonagem(numeroSegundoPersonagem);
+        System.out.println(segundoPersonagem.getNome() + ": " + segundoPersonagem.getFraseInicial());
 
         scanner.close();
     }
@@ -72,5 +71,27 @@ public class Application {
         numPersonagem = scanner.nextInt();
 
         return numPersonagem;
+    }
+
+    public static Personagem atribuicaoDeNumeroAPersonagem(int numPersonagem) {
+
+        switch (numPersonagem) {
+            case 1:
+                return new Eduarda();
+            case 2:
+                return new Erico();
+            case 3:
+                return new Jose();
+            case 4:
+                return new Karol();
+            case 5:
+                return new Luan();
+            case 6:
+                return new Samuel();
+            case 7:
+                return new Victor();
+            default:
+                return new Luan();
+        }
     }
 }
