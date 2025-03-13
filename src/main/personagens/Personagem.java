@@ -49,6 +49,6 @@ public class Personagem {
     }
 
     public static int ataque(Personagem personagemAtacante, Personagem personagemDefensor) {
-        return 1;
+        return 0;
     }
 }
