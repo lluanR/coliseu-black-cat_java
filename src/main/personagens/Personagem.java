@@ -47,4 +47,8 @@ public class Personagem {
     public String getFraseDaVitoria() {
         return fraseDaVitoria;
     }
+
+    public static int ataque(Personagem personagemAtacante, Personagem personagemDefensor) {
+        return 1;
+    }
 }
