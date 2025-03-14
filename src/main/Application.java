@@ -2,6 +2,7 @@ import personagens.Personagem;
 
 import java.util.Scanner;
 
+import static service.Combate.combatePersonagem;
 import static service.Introducao.intro;
 import static service.SelecaoDePersonagens.selecaoDePersonagem;
 
@@ -17,6 +18,13 @@ public class Application {
 
         Personagem player2 = selecaoDePersonagem(false, scanner, player1);
         System.out.println(player2.getNome() + ": " + player2.getFraseInicial());
+
+        // JÁ TEM A INTRODUÇÃO
+        // JÁ TEM A SELEÇÃO DE PERSONAGENS
+        Personagem vencedor = combatePersonagem(player1, player2);
+
+
+
 
         scanner.close();
     }

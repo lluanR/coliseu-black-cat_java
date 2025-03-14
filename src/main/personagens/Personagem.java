@@ -28,6 +28,14 @@ public class Personagem {
         return ataque;
     }
 
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public void setEspecial(int especial) {
+        this.especial = especial;
+    }
+
     public int getDefesa() {
         return defesa;
     }
